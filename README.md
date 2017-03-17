@@ -1,20 +1,21 @@
-NXTool
+nxtool
 ======
 
-NXTool is a command-line tool to manipulate Nintendo Switch NRO and NRR files. It parses and prints the headers, and transforms NRO files into ELF, making it easier to disassemble.
+nxtool is a command-line tool to manipulate Nintendo Switch NRO and NRR files. It parses and prints the headers, and transforms NRO files into ELF, making it easier to disassemble. It is intended to support additional formats in the future as they are discovered.
 
 ## Build
 
+### Windows
+
+Use the Visual Studio project files to compile with the MSVC toolchain, or use `make` to compile with a MinGW toolchain.
+
 ### Linux/OSX
 
-Simply `make` the program. On OSX, you'll need to make sure you have Xcode command line tools installed. On linux, you'll need a working `gcc` toolchain.
+Simply `make` the program. On OSX, you'll need to make sure you have Xcode command line tools installed. On Linux, you'll need a working `gcc` toolchain.
 
 ## Usage
 
 ```
-nxtool (c) Dazzozo
-Built: 16:58:14 Mar 15 2017
-
 Usage: ./nxtool [options...] <file>
 Options:
   -i, --info            Show file info.
@@ -33,6 +34,6 @@ MOD options:
   --elf=file            Specify ELF file path.
 ```
 
-To transform an NRO into an ELF :
+To transform an NRO into an ELF:
 
 `./nxtool --elf=file.elf file.nro`
